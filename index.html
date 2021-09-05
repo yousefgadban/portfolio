@@ -11,9 +11,10 @@
     crossorigin="anonymous"
   />
     <link rel="stylesheet" href="/index.css">
+    <link rel="javascript" href="/index.js">
     <title>Document</title>
 </head>
-<body>
+<body id="body">
     
     <header class="hero" id="hero">
         <div id="navbar" class="navbar top">
@@ -30,6 +31,7 @@
   
         <div class="content">
           <h1>Yousef Gadban</h1>
+          <hr>
           <p>Full stack developer </p> 
         </div>
     </header>
@@ -39,7 +41,7 @@
 
         <div class="skills" id="skills">
             <div class="title">
-                <h1>Skills</h1>
+                <h1 id="skill-title">Skills</h1>
                 <div class="bottom-line"></div>
             </div>
         
@@ -51,7 +53,7 @@
                         <p>85%</p>
                     </div>
                     <div class="line-graph">
-                        <div class=completed></div>
+                        <div id="html-skill" class="completed"></div>
                     </div>
                 </div>
 
@@ -61,7 +63,7 @@
                         <p>70%</p>
                     </div>
                     <div class="line-graph">
-                        <div class=completed></div>
+                        <div id="css-skill" class=completed></div>
                     </div>
                 </div>
 
@@ -71,37 +73,37 @@
                         <p>80%</p>
                     </div>
                     <div class="line-graph">
-                        <div class=completed></div>
+                        <div id="javascript-skill" class=completed></div>
                     </div>
                 </div>
 
                 <div class="skill react">
                     <div class="subject">
                         <p>React</p>
-                        <p>85%</p>
+                        <p>90%</p>
                     </div>
                     <div class="line-graph">
-                        <div class=completed></div>
+                        <div id="react-skill" class=completed></div>
                     </div>
                 </div>
 
-                <div class="skill react">
+                <div class="skill python">
                     <div class="subject">
-                        <p>React</p>
+                        <p>Python</p>
                         <p>85%</p>
                     </div>
                     <div class="line-graph">
-                        <div class=completed></div>
+                        <div id="python-skill"  class=completed></div>
                     </div>
                 </div>
 
-                <div class="skill react">
+                <div class="skill swift">
                     <div class="subject">
-                        <p>React</p>
-                        <p>85%</p>
+                        <p>Swift</p>
+                        <p>80%</p>
                     </div>
                     <div class="line-graph">
-                        <div class=completed></div>
+                        <div id="swift-skill" class=completed></div>
                     </div> 
                 </div>
 
@@ -116,18 +118,18 @@
         
             <div class="projects-grid"> 
                 <div class="project project1">
-                    <img src="/images/juve.jpg" alt="">
-                    <h3>Project 1</h3>
+                    <img src="/images/apple.png" alt="">
+                    <h3>Apple</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ex voluptates consequatur incidunt dolore doloribus eum a perspiciatis provident, asperiores dicta, alias earum quam illum?</p>
                 </div>
                 <div class="project project2">
-                    <img src="/images/juve.jpg" alt="">
-                    <h3>Project 2</h3>
+                    <img src="/images/tesla-logo.png" alt="">
+                    <h3>Tesla</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ex voluptates consequatur incidunt dolore doloribus eum a perspiciatis provident, asperiores dicta, alias earum quam illum?</p>
                 </div>
                 <div class="project project3">
                     <img src="/images/juve.jpg" alt="">
-                    <h3>Project 3</h3>
+                    <h3>Comming soon...</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ex voluptates consequatur incidunt dolore doloribus eum a perspiciatis provident, asperiores dicta, alias earum quam illum?</p>
                 </div>
             </div>  
@@ -169,5 +171,51 @@
         </div>
     </footer>
 
+
+    <script>
+
+        const htmlSkill = document.getElementById("html-skill");
+        const cssSkill = document.getElementById("css-skill");
+        const javascriptSkill = document.getElementById("javascript-skill");
+        const reactSkill = document.getElementById("react-skill");
+        const pythonSkill = document.getElementById("python-skill");
+        const swiftSkill = document.getElementById("swift-skill");
+
+        
+        var skillRun = false;
+
+        window.addEventListener("scroll", (event) => {
+            let scroll = this.scrollY;
+            console.log(scroll);
+
+            if (scroll >= 200) {
+                const navbar = document.getElementById("navbar");
+                navbar.style.opacity = 1;  
+                // navbar.style.backgroundColor = 'red';
+            }
+
+            if (scroll > 550 && scroll < 585) {
+                if (!skillRun) {
+                    htmlSkill.classList.toggle("html-skill-anim");
+                    cssSkill.classList.toggle("css-skill-anim");
+                    javascriptSkill.classList.toggle("javascript-skill-anim");
+                    reactSkill.classList.toggle("react-skill-anim");
+                    pythonSkill.classList.toggle("python-skill-anim");
+                    swiftSkill.classList.toggle("swift-skill-anim");
+
+                    skillRun = true
+                }
+            } 
+
+            
+
+        });
+
+
+    </script>
+
 </body>
 </html>
+
+
+<!-- yousefgadban.netlify.app -->

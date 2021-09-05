@@ -105,6 +105,10 @@ img {
     font-size: 64px;
 }
 
+.hero .content hr {
+    width: 50%;
+}
+
 .hero .content p {
     font-size: 28px;
     max-width: 600px;
@@ -181,7 +185,7 @@ img {
 }
 
 .skills .skills-grid .line-graph .completed {
-    width: 85%;
+    width: 0;
     height: 15px;
     background-color: var(--primary-color);
     position: absolute;
@@ -189,7 +193,7 @@ img {
     left: 0;
 }
 
-.skills .skills-grid .css .line-graph .completed {
+/* .skills .skills-grid .css .line-graph .completed {
     width: 70%;
 }
 
@@ -199,7 +203,7 @@ img {
 
 .skills .skills-grid .react .line-graph .completed {
     width: 85%;
-}
+} */
 
 
 
@@ -401,5 +405,98 @@ img {
 
     .skills .skills-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* ---------------------------------------------- Animation -------------------------------------------- */
+
+.skills .skills-grid .line-graph .html-skill-anim {
+    width: 0;
+    animation: html-skill 2s linear forwards;
+}
+
+@keyframes html-skill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+.skills .skills-grid .line-graph .css-skill-anim {
+    width: 0;
+    animation: css-skill 2s linear forwards;
+}
+
+@keyframes css-skill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+.skills .skills-grid .line-graph .javascript-skill-anim {
+    width: 0;
+    animation: javascript-skill 2s linear forwards;
+}
+
+@keyframes javascript-skill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+.skills .skills-grid .line-graph .react-skill-anim {
+    width: 0;
+    animation: react-skill 2s linear forwards;
+}
+
+@keyframes react-skill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skills .skills-grid .line-graph .python-skill-anim {
+    width: 0;
+    animation: python-skill 2s linear forwards;
+}
+
+@keyframes python-skill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+.skills .skills-grid .line-graph .swift-skill-anim {
+    width: 0;
+    animation: swift-skill 2s linear forwards;
+}
+
+@keyframes swift-skill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
     }
 }
